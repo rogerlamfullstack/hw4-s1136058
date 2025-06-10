@@ -1,0 +1,8 @@
+tensorflow
+torch
+torchvision
+scikit-learn
+aif360
+matplotlib
+numpy
+jupyter
