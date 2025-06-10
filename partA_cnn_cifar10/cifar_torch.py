@@ -45,7 +45,7 @@ class CNN(nn.Module):
 model = CNN().to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
-writer = SummaryWriter('tensorboard_logs')
+writer = SummaryWriter('tensorboard_logs/tf_torch')
 
 for epoch in range(15):
     model.train()

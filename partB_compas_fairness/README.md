@@ -1,6 +1,10 @@
+If you meet the error from running dataset, please download this to fix it. I can not add this to requirement.txt file because these command need run manually:
+!mkdir -p /usr/local/lib/python3.11/dist-packages/aif360/data/raw/compas
+!wget https://raw.githubusercontent.com/propublica/compas-analysis/master/compas-scores-two-years.csv -O /usr/local/lib/python3.11/dist-packages/aif360/data/raw/compas/compas-scores-two-years.csv
+
 partB_compas_fairness/ Q4
-After using the Reweighing method, the **Statistical Parity Difference (SPD)** got better more than the **Equalized Odds Difference (EOD)**. This means the method helped reduce unfair differences in positive outcomes between races.
+After applying the Reweighing method, Statistical Parity Difference improved significantly from 0.1990 to 0.0136, showing reduced bias in positive classification rates between racial groups.
+Equalized Odds Difference also improved (from 0.1089 to -0.0610), but to a lesser extent.
 
-But, the accuracy dropped a little. That’s a common side effect when trying to make models fairer. In this case, it's okay because fairness is more important in systems like criminal justice.After applying the Reweighing mitigation technique, the **Statistical Parity Difference (SPD)** showed a greater improvement compared to the **Equalized Odds Difference (EOD)**. This indicates that the mitigation was more effective at reducing overall bias in the distribution of positive predictions across races.
-
-However, this improvement came with a **slight drop in accuracy**, which is a common trade-off in fairness interventions. In this context, such a trade-off is acceptable because the primary goal is to reduce systemic bias in high-stakes decision-making systems like criminal justice risk assessments.
+The greater improvement was in SPD.
+Trade-off: Accuracy slightly decreased from 0.6688 to 0.6645, showing a mild compromise between fairness and performance.

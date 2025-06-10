@@ -6,3 +6,4 @@ aif360
 matplotlib
 numpy
 jupyter
+wget
